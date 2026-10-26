@@ -16,12 +16,12 @@ second_member/
   run_member1_C.py      этапы 1–3 кодом first_member/main.py на участках C
   autocorrelation.py    этап 4: АКФ, время корреляции, проверка стационарности
   bootstrap.py          этапы 5–6: блочный бутстрэп, доверительные интервалы, p-value, TVD и блочная перестановка
-  extras.py             этап 7 (дополнительно): энтропия Шеннона и спектральная плотность мощности
   regions_final.py, regions_variants.py   рисунки участков
+  acf_canvas.py         все автокорреляционные функции rep2 на одном рисунке
   gif_glycine_path.py, gif_side_by_side.py   схематичная анимация (нужны pymol, MDAnalysis, hole2)
   A/ B/ C/ C2/          результаты по вариантам участков (xlsx и рисунки)
   checks/               дополнительные проверки методов (суррогатные ряды и др.)
-  report/               отчёт (Отчёт.docx, Отчёт.pdf), презентация, анимации
+  report/               схематичные анимации (GIF)
 ```
 
 ## Как повторить расчёт
@@ -36,8 +36,8 @@ python second_member/autocorrelation.py C    # этап 4
 python second_member/bootstrap.py C          # этапы 5–6 (~2 мин)
 python second_member/autocorrelation.py C2   # проверка на втором окне плато
 python second_member/bootstrap.py C2
-python second_member/extras.py               # этап 7
 python second_member/regions_final.py        # рисунок выбранных участков
+python second_member/acf_canvas.py           # все АКФ на одном рисунке
 ```
 
 Вместо `C` можно указать `A` или `B`, чтобы получить результаты для других вариантов участков.
